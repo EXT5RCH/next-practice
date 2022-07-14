@@ -1,0 +1,65 @@
+.overlay {
+  @apply fixed;
+  @apply overflow-hidden;
+  @apply top-0 right-0 bottom-0 left-0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: var(--z-index-modal);
+
+  .content {
+    @apply absolute;
+    @apply top-1/2 left-1/2;
+    transform: translate(-50%, -50%);
+    @apply bg-white;
+    @apply rounded;
+    @apply w-3/4;
+    @apply h-3/4;
+    @apply px-2;
+
+    .header {
+      @apply flex flex-row;
+      @apply justify-between;
+      @apply items-center;
+      @apply h-8;
+
+      .title {
+        @apply text-xl;
+      }
+    }
+
+    .section {
+      @apply border-t;
+      @apply border-gray-300;
+    }
+  }
+}
+
+.fadeIn {
+  animation: fadeIn 0.5s ease;
+}
+
+.fadeOut {
+  @apply bottom-full;
+  animation: fadeOut 0.5s ease;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+    bottom: 0;
+  }
+
+  100% {
+    opacity: 0;
+    bottom: 0;
+  }
+}

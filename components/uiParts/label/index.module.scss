@@ -1,0 +1,9 @@
+.background {
+  @apply bg-gray-100;
+  @apply px-2;
+  @apply truncate;
+
+  .text {
+    opacity: 0.3;
+  }
+}

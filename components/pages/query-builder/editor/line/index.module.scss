@@ -1,0 +1,26 @@
+.line {
+  @apply relative;
+  z-index: var(--z-index-line);
+
+  & > *:hover {
+    @apply visible;
+  }
+
+  svg {
+    @apply absolute;
+
+    & + button {
+      z-index: var(--z-index-line);
+      @apply absolute;
+      @apply invisible;
+    }
+
+    &:hover + button {
+      @apply visible;
+    }
+  }
+
+  .icon {
+    @apply text-gray-900;
+  }
+}

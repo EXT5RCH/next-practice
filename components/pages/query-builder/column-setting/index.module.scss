@@ -1,0 +1,173 @@
+.column-setting {
+  @apply bg-white;
+  width: 100%;
+  height: 240px;
+  z-index: var(--z-index-default);
+
+  .line-hover {
+    @apply flex;
+    @apply justify-center;
+    @apply items-center;
+    @apply h-3;
+    @apply w-full;
+    @apply bg-white;
+    @apply border-y;
+    cursor: row-resize;
+
+    .line {
+      @apply flex;
+      @apply justify-center;
+      @apply items-center;
+      @apply h-1;
+      @apply w-full;
+      @apply bg-gray-300;
+    }
+  }
+
+  .editor {
+    @apply bg-gray-100;
+    @apply pt-3;
+    @apply flex flex-row;
+    @apply w-full h-full;
+    @apply border;
+
+    .caption {
+      @apply mt-3;
+      @apply border;
+      @apply border-gray-100;
+      @apply flex flex-col;
+      @apply text-right;
+      width: 120px;
+
+      & > input[type='text'],
+      & > div,
+      & > select {
+        @apply truncate;
+      }
+
+      & > * {
+        @apply h-6;
+        @apply px-2;
+        @apply border-gray-100;
+        @apply border-b;
+      }
+
+      & > *:last-child {
+        @apply h-6;
+        @apply px-2;
+        @apply border-0;
+      }
+    }
+
+    .content {
+      width: calc(100% - 160px);
+
+      .scroll-x {
+        @apply h-full;
+        @apply overflow-x-auto;
+        @apply overflow-y-hidden;
+      }
+
+      .row {
+        @apply flex flex-row;
+        @apply mt-3;
+        @apply w-full;
+        @apply bg-white;
+        height: 170px;
+
+        .item {
+          @apply relative;
+          @apply flex flex-col;
+          @apply flex-shrink-0;
+          @apply bg-white;
+          @apply border;
+          @apply border-gray-300;
+
+          .drag {
+            @apply hidden;
+          }
+
+          &:hover,
+          & > *:focus {
+            box-shadow: 0 15px 30px -5px rgba(0, 0, 0, 0.15),
+              0 0 5px rgba(0, 0, 0, 0.1);
+            transform: translateY(-2px);
+
+            & > .drag {
+              @apply absolute;
+              @apply flex;
+              @apply rotate-90;
+              @apply left-0 right-0 m-auto;
+              @apply border;
+              @apply rounded-md;
+              @apply bg-gray-200;
+              @apply border-gray-500;
+              @apply cursor-grab;
+              top: -12px;
+
+              &:active {
+                @apply cursor-grabbing;
+              }
+            }
+          }
+
+          .header {
+            @apply flex;
+            @apply justify-end;
+            @apply items-center;
+            @apply gap-1;
+
+            .delete {
+              @apply text-black;
+              @apply cursor-pointer;
+
+              &:hover {
+                @apply text-red-500;
+              }
+            }
+          }
+
+          // .where {
+          //   @apply px-2;
+          //   @apply flex;
+
+          //   .control {
+          //     @apply flex;
+          //     @apply justify-start;
+          //     @apply items-center;
+          //     @apply gap-1;
+          //     @apply pr-2;
+          //     @apply border-r;
+
+          //     .plus {
+          //       @apply text-green-500;
+          //       @apply cursor-pointer;
+          //     }
+
+          //     .minus {
+          //       @apply text-red-500;
+          //       @apply cursor-pointer;
+          //     }
+          //   }
+
+          //   .where-input {
+          //     @apply inline-block;
+          //     @apply w-full;
+          //   }
+          // }
+
+          & > * {
+            @apply h-6;
+            @apply border-b;
+            @apply border-gray-300;
+          }
+
+          & > *:last-child {
+            @apply h-6;
+            @apply border-0;
+          }
+        }
+      }
+    }
+  }
+}

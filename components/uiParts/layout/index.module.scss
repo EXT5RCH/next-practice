@@ -1,0 +1,10 @@
+.layout {
+  @apply flex flex-row;
+  @apply w-full;
+  height: calc(100% - 3rem);
+
+  &__main {
+    @apply h-full;
+    width: calc(100% - 3rem);
+  }
+}

@@ -1,0 +1,70 @@
+.login {
+  @apply h-full w-full;
+  @apply flex;
+  @apply justify-center;
+  @apply items-center;
+  @apply bg-gray-50;
+
+  &__content {
+    @apply border;
+    @apply rounded;
+    @apply border-gray-400;
+    @apply flex flex-col;
+    @apply items-center;
+    @apply p-4;
+    @apply gap-4;
+    @apply bg-green-50;
+
+    &-title {
+      @apply text-4xl;
+    }
+
+    strong {
+      @apply text-sm;
+      @apply text-red-500;
+    }
+
+    &-body {
+      @apply w-64;
+      @apply border;
+      @apply p-2;
+      @apply bg-white;
+    }
+
+    &-pattern-link,
+    &-pattern-button {
+      @apply flex flex-col;
+      @apply gap-1;
+      @apply p-2;
+
+      span {
+        @apply text-sm;
+        @apply underline;
+      }
+
+      a {
+        @apply text-blue-700;
+        @apply px-2;
+
+        &:hover {
+          @apply underline;
+        }
+
+        &:active {
+          @apply text-purple-700;
+        }
+      }
+
+      button {
+        @apply border;
+        @apply rounded;
+        @apply py-1 px-2;
+        @apply bg-gray-100;
+
+        &:hover {
+          @apply bg-gray-200;
+        }
+      }
+    }
+  }
+}

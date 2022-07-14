@@ -1,0 +1,16 @@
+.header {
+  @apply relative;
+  @apply flex;
+  @apply justify-between;
+  @apply w-full h-8;
+  @apply border;
+  @apply bg-white;
+  z-index: var(--z-index-default);
+
+  &__menu,
+  &__personal {
+    @apply w-8 h-8;
+    @apply justify-center items-center;
+    @apply border;
+  }
+}

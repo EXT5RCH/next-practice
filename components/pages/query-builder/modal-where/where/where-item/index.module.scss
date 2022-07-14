@@ -1,0 +1,33 @@
+.where-line {
+  @apply flex;
+  @apply justify-start;
+  @apply items-center;
+  @apply w-full;
+  @apply p-1;
+  @apply gap-1;
+  @apply border;
+
+  &__icon {
+    @apply w-20;
+    @apply cursor-pointer;
+
+    &.add {
+      @apply text-green-700;
+    }
+
+    &.clear {
+      @apply text-red-700;
+    }
+  }
+
+  &__select {
+    @apply w-full;
+  }
+
+  &__input {
+    @apply border;
+    @apply w-full h-9;
+    @apply border-gray-300;
+    @apply rounded;
+  }
+}

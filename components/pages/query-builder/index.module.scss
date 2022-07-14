@@ -1,0 +1,9 @@
+.query-builder {
+  @apply h-full w-full;
+  @apply flex flex-row;
+
+  .content {
+    @apply flex flex-col;
+    @apply w-full;
+  }
+}

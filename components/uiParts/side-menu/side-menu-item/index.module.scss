@@ -1,0 +1,20 @@
+.side-menu-item {
+  @apply w-12 h-12;
+  @apply flex flex-col;
+  @apply items-center;
+  @apply border border-collapse;
+
+  & * {
+    @apply cursor-pointer;
+  }
+
+  .icon {
+    @apply w-6 h-6;
+  }
+
+  .caption {
+    @apply w-12 h-6;
+    @apply text-xs;
+    @apply text-center;
+  }
+}

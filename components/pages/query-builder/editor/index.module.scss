@@ -1,0 +1,29 @@
+.editor {
+  @apply relative;
+  @apply w-full;
+  @apply flex flex-row;
+  @apply bg-gray-50;
+  @apply overflow-scroll;
+  @apply flex-grow;
+  min-height: 640px;
+
+  .builder {
+    @apply absolute;
+    height: 10000px;
+    width: 10000px;
+    background-image: repeating-linear-gradient(
+        to bottom,
+        #cacaca,
+        #cacaca 1px,
+        transparent 0,
+        transparent 50px
+      ),
+      repeating-linear-gradient(
+        to right,
+        #cacaca,
+        #cacaca 1px,
+        transparent 0,
+        transparent 50px
+      );
+  }
+}
